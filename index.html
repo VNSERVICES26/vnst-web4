@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Network Services - Premium Crypto Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="V Network Services Logo" class="logo-img">
+                <span class="brand-name">V Network Services</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#swap" class="nav-link">Buy VNST</a></li>
+                <li><a href="#tokenomics" class="nav-link">Tokenomics</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="https://github.com/your-repo" target="_blank" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Premium Crypto Platform <span>VNST</span></h1>
+                <p class="hero-subtitle">
+                    The most advanced decentralized financial services platform with integrated swap functionality.
+                    Join the revolution and be part of the future of finance.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#swap" class="btn btn-primary">Buy VNST</a>
+                    <a href="https://github.com/your-repo" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="crypto-illustration.png" alt="Crypto Illustration" class="hero-main-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Swap Section -->
+    <section class="swap-section" id="swap">
+        <div class="swap-container">
+            <div class="swap-header">
+                <h2 class="section-title">Buy VNST Tokens</h2>
+                <p>Purchase VNST tokens directly with USDT at the current rate</p>
+            </div>
+            <div class="swap-content">
+                <div class="swap-info">
+                    <div class="info-card">
+                        <h3 class="info-title"><i class="fas fa-coins"></i> Current Price</h3>
+                        <p class="info-value" id="vnstPrice">0.09 USDT</p>
+                        <p class="info-note">1 VNST = 0.09 USDT</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="info-title"><i class="fas fa-wallet"></i> Available</h3>
+                        <p class="info-value" id="availableVNST">992,007.70 VNST</p>
+                        <p class="info-note">Tokens available for purchase</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="info-title"><i class="fas fa-info-circle"></i> Minimum Buy</h3>
+                        <p class="info-value" id="minBuyAmount">100 VNST</p>
+                        <p class="info-note">Minimum purchase amount</p>
+                    </div>
+                </div>
+                <div class="swap-form-container">
+                    <div class="wallet-connect">
+                        <button id="connectWalletBtn" class="wallet-btn">
+                            <i class="fas fa-wallet wallet-icon"></i> Connect Wallet
+                        </button>
+                        <div id="walletOptions" class="wallet-options">
+                            <div class="wallet-option" data-wallet="MetaMask">
+                                <img src="metamask-icon.png" alt="MetaMask" class="wallet-option-img">
+                                <span>MetaMask</span>
+                            </div>
+                            <div class="wallet-option" data-wallet="WalletConnect">
+                                <img src="walletconnect-icon.png" alt="WalletConnect" class="wallet-option-img">
+                                <span>WalletConnect</span>
+                            </div>
+                        </div>
+                        <div id="walletConnected" class="wallet-connected">
+                            <p><i class="fas fa-check-circle"></i> Wallet Connected</p>
+                            <p id="walletAddress" class="wallet-address"></p>
+                        </div>
+                    </div>
+                    <form class="swap-form">
+                        <div class="form-group">
+                            <label for="vnstAmount" class="form-label">VNST Amount</label>
+                            <input type="number" id="vnstAmount" class="form-input" placeholder="Enter VNST amount">
+                        </div>
+                        <div class="quote-result">
+                            <p>You will pay: <span id="usdtAmount" class="quote-amount">0.00</span> USDT</p>
+                        </div>
+                        <div class="action-buttons">
+                            <button type="button" id="approveBtn" class="action-btn approve-btn" disabled>
+                                Approve USDT
+                            </button>
+                            <button type="button" id="buyBtn" class="action-btn buy-btn" disabled>
+                                Buy VNST
+                            </button>
+                        </div>
+                    </form>
+                    <div class="contract-info">
+                        <p>VNST Contract Address:</p>
+                        <p id="vnstContract" class="contract-address">0xF9Bbb00436B384b57A52D1DfeA8Ca43fC7F11527</p>
+                        <button id="copyContractBtn" class="copy-btn">
+                            <i class="far fa-copy"></i> Copy Address
+                        </button>
+                    </div>
+                    <div id="statusMessages" class="status-messages"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section class="tokenomics-section" id="tokenomics">
+        <div class="tokenomics-container">
+            <div class="swap-header">
+                <h2 class="section-title">Tokenomics</h2>
+                <p>Fair and sustainable token distribution for long-term growth</p>
+            </div>
+            <div class="tokenomics-grid">
+                <div class="tokenomics-card">
+                    <div class="tokenomics-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="tokenomics-title">Total Supply</h3>
+                    <p class="tokenomics-value">10,000,000</p>
+                    <p class="tokenomics-description">
+                        The total amount of VNST tokens that will ever exist.
+                    </p>
+                </div>
+                <div class="tokenomics-card">
+                    <div class="tokenomics-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="tokenomics-title">Initial Burn</h3>
+                    <p class="tokenomics-value">20%</p>
+                    <p class="tokenomics-description">
+                        2,000,000 VNST tokens burned to increase scarcity.
+                    </p>
+                </div>
+                <div class="tokenomics-card">
+                    <div class="tokenomics-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="tokenomics-title">Community</h3>
+                    <p class="tokenomics-value">50%</p>
+                    <p class="tokenomics-description">
+                        Allocated for community rewards, airdrops, and incentives.
+                    </p>
+                </div>
+                <div class="tokenomics-card">
+                    <div class="tokenomics-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="tokenomics-title">Development</h3>
+                    <p class="tokenomics-value">30%</p>
+                    <p class="tokenomics-description">
+                        Reserved for platform development and team incentives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="roadmap-container">
+            <div class="swap-header">
+                <h2 class="section-title">Roadmap</h2>
+                <p>Our strategic plan for growth and development</p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q1 2023</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-phase">Phase 1: Launch</h3>
+                        <ul class="roadmap-features">
+                            <li class="roadmap-feature">Token creation and deployment</li>
+                            <li class="roadmap-feature">Initial DEX listing</li>
+                            <li class="roadmap-feature">Website and documentation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q2 2023</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-phase">Phase 2: Growth</h3>
+                        <ul class="roadmap-features">
+                            <li class="roadmap-feature">Marketing campaigns</li>
+                            <li class="roadmap-feature">Community building</li>
+                            <li class="roadmap-feature">First exchange listing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q3 2023</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-phase">Phase 3: Expansion</h3>
+                        <ul class="roadmap-features">
+                            <li class="roadmap-feature">Swap functionality</li>
+                            <li class="roadmap-feature">Staking platform</li>
+                            <li class="roadmap-feature">Partnership announcements</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q4 2023</div>
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-phase">Phase 4: Ecosystem</h3>
+                        <ul class="roadmap-features">
+                            <li class="roadmap-feature">Mobile app release</li>
+                            <li class="roadmap-feature">Full platform launch</li>
+                            <li class="roadmap-feature">Additional product lines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="V Network Services Logo" class="footer-logo-img">
+                <span class="footer-brand">V Network Services</span>
+            </div>
+            <p class="footer-slogan">The future of decentralized financial services</p>
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#swap" class="footer-link">Buy VNST</a>
+                <a href="#tokenomics" class="footer-link">Tokenomics</a>
+                <a href="#roadmap" class="footer-link">Roadmap</a>
+                <a href="https://github.com/your-repo" target="_blank" class="footer-link">GitHub</a>
+                <a href="#" class="footer-link">Terms</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">
+                &copy; 2023 V Network Services. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
