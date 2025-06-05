@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V Network Services | Decentralized Wealth</title>
+    <title>V Network Services | Bridge to Helping Poor Persons</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
+    <!-- हेडर -->
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="V Network Logo">
-                <span>V Network Services</span>
+                <img src="images/logo.png" alt="V Network Logo" class="logo-img">
+                <span class="logo-text">V NETWORK SERVICES</span>
             </div>
             <div class="menu-icon" id="menuIcon">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <nav id="navMenu">
+            <nav class="nav-menu" id="navMenu">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -32,52 +33,25 @@
         </div>
     </header>
 
-    <section class="hero" style="background-image: url('images/hero-bg.png');">
-        <div class="container">
-            <h1 class="scroll-animation">Decentralized Wealth Building</h1>
-            <p class="scroll-animation">Stake VRCN and earn 52% to 100% profits with our community-first approach</p>
-            <button class="btn-primary bounce-animation" id="buyVnstBtn">Buy VNST</button>
+    <!-- हीरो सेक्शन -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-pop-in">BRIDGE TO HELPING POOR PERSONS</h1>
+            <p class="hero-subtitle animate-pop-in">Empowering underserved communities through blockchain technology</p>
+            <button class="cta-button animate-pop-in" id="buyVnstBtn">BUY VNST</button>
         </div>
     </section>
 
-    <section class="roadmap">
-        <h2 class="section-title scroll-animation">Our Roadmap</h2>
-        <div class="timeline">
-            <div class="timeline-item bounce-animation">
-                <h3><i class="fas fa-rocket"></i> Q1: Token Creation</h3>
-                <p>Initial launch & private sale</p>
-            </div>
-            <div class="timeline-item bounce-animation">
-                <h3><i class="fas fa-chart-line"></i> Q2: Public Sale</h3>
-                <p>Staking plan launch & DEX listing</p>
-            </div>
-            <div class="timeline-item bounce-animation">
-                <h3><i class="fas fa-mobile-alt"></i> Q3: Real Products</h3>
-                <p>DigiGold App & Education Platform</p>
-            </div>
-            <div class="timeline-item bounce-animation">
-                <h3><i class="fas fa-link"></i> Q4: Blockchain</h3>
-                <p>Custom blockchain development</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="social-links">
-        <a href="https://facebook.com/share/1C7Ciu39DY" target="_blank" class="bounce-animation"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/vnservices07" target="_blank" class="bounce-animation"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/vnetworkserviceofficial" target="_blank" class="bounce-animation"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@vnetworkservices" target="_blank" class="bounce-animation"><i class="fab fa-youtube"></i></a>
-        <a href="https://t.me/vnstoken" target="_blank" class="bounce-animation"><i class="fab fa-telegram"></i></a>
-    </section>
-
+    <!-- फुटर -->
     <footer>
-        <p>&copy; 2025 V Network Services. Empowering the underserved through technology.</p>
+        <p>© 2025 V Network Services. Join the fair crypto revolution.</p>
     </footer>
 
-    <div class="modal" id="vnstModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <iframe src="https://vnservices26.github.io/vnst-SWAP/" title="VNST Swap"></iframe>
+    <!-- VNST मोडल -->
+    <div class="modal-overlay" id="vnstModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <iframe src="https://vnservices26.github.io/vnst-SWAP/" title="VNST Swap Platform"></iframe>
         </div>
     </div>
 
