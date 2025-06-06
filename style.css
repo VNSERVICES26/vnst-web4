@@ -1,149 +1,132 @@
-/* Reset & Base */
-* {
+/* Reset & Basic */
+body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e1a;
+  background: #0a0a0a;
   color: #fff;
   line-height: 1.6;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
 
-/* Header & Navbar */
+/* Header */
 header {
-  background-color: #12122b;
-  padding: 15px 30px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 10px 20px;
   flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
 }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 .logo img {
   height: 40px;
+  margin-right: 10px;
 }
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
   padding: 8px 12px;
-  border-radius: 6px;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #ff8c00;
+nav ul li a.active, nav ul li a:hover {
+  background: #ffd700;
   color: #000;
+  border-radius: 4px;
 }
 .menu-icon {
   display: none;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
-  color: white;
 }
 .buy-btn {
-  background: linear-gradient(45deg, #ffa500, #00bfff);
+  padding: 8px 16px;
+  background: gold;
   color: #000;
-  padding: 10px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
-  animation: bounce 2s infinite;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
 }
 
-/* Page Banner */
+/* Section Styling */
 .page-banner {
-  height: 200px;
+  padding: 60px 20px;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 4px #000;
+  text-align: center;
 }
-
-/* Main Content */
+.page-banner h2 {
+  font-size: 2.5rem;
+  color: gold;
+}
 .content {
   padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  animation: fadeInUp 1s ease-out;
+  background-size: cover;
+  background-position: center;
 }
-@keyframes fadeInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.content h3 {
-  font-size: 24px;
-  margin-top: 30px;
+.content h2 {
+  font-size: 2rem;
+  color: gold;
   margin-bottom: 10px;
-  color: #ff8c00;
 }
-.content p {
-  margin-bottom: 20px;
-  font-size: 16px;
+.content p, .content ul {
+  margin-bottom: 12px;
+}
+
+/* Swap Section */
+.swap-frame {
+  margin: 20px;
+  height: 500px;
+}
+.swap-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #12122b;
-  margin-top: 40px;
-  font-size: 14px;
+  background: #111;
 }
-
-/* Social Media Icons */
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
+  margin-bottom: 10px;
 }
 .social-icons a {
-  font-size: 22px;
-  color: #fff;
-  transition: 0.3s;
+  color: #ffd700;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: transform 0.3s;
 }
 .social-icons a:hover {
-  color: #00bfff;
   transform: scale(1.2);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
     display: none;
-    background-color: #12122b;
+    flex-direction: column;
+    background: #111;
     width: 100%;
-    margin-top: 10px;
-    padding: 10px 0;
+    text-align: right;
+    padding: 10px;
   }
   nav ul.show {
     display: flex;
