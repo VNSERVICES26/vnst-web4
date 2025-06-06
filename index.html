@@ -2,96 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>V Network Services</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V Network Services - Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="images/logo.png" alt="Logo"/>
-  </div>
-  <button id="menu-toggle">&#9776;</button>
-  <nav>
-    <ul id="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Tokenomics</a></li>
-      <li><a href="#">Vision</a></li>
-      <li><a href="#">Why Join Us</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="section" id="home">
-  <img class="bg" src="images/hero-bg.png" alt="Background"/>
-  <h1>Welcome to V Network Services</h1>
-  <a class="buy-button" href="https://vnservices26.github.io/vnst-SWAP/" target="_blank">Buy VNST</a>
-</section>
-
-<section class="section" id="roadmap">
-  <h2>Roadmap</h2>
-  <ul>
-    <li>Q1: Token creation, Initial Launch</li>
-    <li>Q2: Public sale, Staking plan launch, DEX listing</li>
-    <li>Q3: Real life utility product launch (Digi Gold App, Education App)</li>
-    <li>Q4: Blockchain development</li>
-  </ul>
-</section>
-
-<section class="section" id="about">
-  <img class="bg" src="images/about-bg.png" alt="Background"/>
-  <h2>About Us</h2>
-  <p>V Network Services is a crypto company aiming to connect people with blockchain technology. It is a single-owner company offering staking options with guaranteed minimum 52% returns.</p>
-</section>
-
-<section class="section" id="tokenomics">
-  <img class="bg" src="images/token-bg.png" alt="Background"/>
-  <h2>Tokenomics</h2>
-  <ul>
-    <li>Total Supply: 105,000,000 VNST</li>
-    <li>Direct Reward Reserve: 5,000,000 VNST</li>
-    <li>Private Sale: 1,000,000 VNST</li>
-    <li>Public Sale: 99,000,000 VNST (Distributed over 11 months)</li>
-  </ul>
-</section>
-
-<section class="section" id="vision">
-  <img class="bg" src="images/vision-bg.png" alt="Background"/>
-  <h2>Our Vision</h2>
-  <p>Connecting every person with technology, building trust in online markets, delivering real-life products, supporting the poor, and setting new trends in the crypto world.</p>
-</section>
-
-<section class="section" id="why-join">
-  <img class="bg" src="images/whyjoin-bg.png" alt="Background"/>
-  <h2>Why Join Us?</h2>
-  <p>We are different from other companies. Our mission is to make sure every user earns profit, unlike others where only a few benefit. Join a real, community-focused project.</p>
-</section>
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-about">
-      <h3>V Network Services</h3>
-      <p>Brigade to Helping Poor Persons — A community-first crypto project connecting people with blockchain & real-life utility.</p>
-    </div>
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
-        <a href="https://x.com/vnservices07?t=nWJAfVspUfvYb6IKNkkOaw&s=09" target="_blank">Twitter</a>
-        <a href="https://www.instagram.com/vnetworkserviceofficial?igsh=MTl0MW9uZ2w0YmFtZQ==" target="_blank">Instagram</a>
-        <a href="https://youtube.com/@vnetworkservices?si=vowQkbD11Yb6zgdj" target="_blank">YouTube</a>
-        <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
-        <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <img src="images/logo.png" alt="V Network Services Logo" class="logo" />
+      <nav>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="tokonomix.html" class="nav-link">Tokenomics</a></li>
+          <li><a href="vision.html" class="nav-link">Vision</a></li>
+          <li><a href="why-join.html" class="nav-link">Why Join Us</a></li>
+        </ul>
+      </nav>
+      <button id="buy-vnst-btn" class="btn btn-primary">Buy VNST</button>
+      <div id="hamburger" class="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
+  </header>
+
+  <main>
+    <section class="hero-section container">
+      <h1 class="fade-in">Welcome to V Network Services</h1>
+      <p class="fade-in delay-1">
+        Bridging Technology to Help Poor Persons.
+      </p>
+      <button id="buy-vnst-btn-hero" class="btn btn-primary bounce">Buy VNST Token</button>
+    </section>
+
+    <section class="roadmap-section container">
+      <h2>Roadmap</h2>
+      <ul class="roadmap-list">
+        <li><strong>Q1:</strong> Token creation, initial launch</li>
+        <li><strong>Q2:</strong> Public sale, staking plan launch, DEX listing</li>
+        <li><strong>Q3:</strong> Real life utility products launch - Digi Gold App, Education App</li>
+        <li><strong>Q4:</strong> Blockchain development</li>
+      </ul>
+    </section>
+
+    <section class="swap-embed container">
+      <h2>Buy VNST Token</h2>
+      <iframe src="https://vnservices26.github.io/vnst-SWAP/" title="VNST Swap" frameborder="0" id="vnst-swap-iframe"></iframe>
+    </section>
+
+    <section class="social-icons container">
+      <h3>Connect With Us</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/1C7Ciu39DY/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/vnservices07?t=nWJAfVspUfvYb6IKNkkOaw&s=09" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/vnetworkserviceofficial" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@vnetworkservices" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+        <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/vnstoken" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
     <p>&copy; 2025 V Network Services. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
