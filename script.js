@@ -1,27 +1,15 @@
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const buyBtnMain = document.getElementById('buy-vnst-btn');
-const buyBtnHero = document.getElementById('buy-vnst-btn-hero');
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("show");
+}
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
+function openSwap() {
+  const iframe = document.createElement("iframe");
+  iframe.src = "https://vnservices26.github.io/vnst-SWAP/";
+  iframe.style.width = "100%";
+  iframe.style.height = "100vh";
+  iframe.style.border = "none";
 
-// Scroll highlight active menu
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    navLinks.forEach(lnk => lnk.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
-
-// Buy VNST button open embedded swap section on page scroll
-buyBtnMain.addEventListener('click', () => {
-  document.querySelector('.swap-embed').scrollIntoView({ behavior: 'smooth' });
-});
-
-buyBtnHero.addEventListener('click', () => {
-  document.querySelector('.swap-embed').scrollIntoView({ behavior: 'smooth' });
-});
+  document.body.innerHTML = '';
+  document.body.appendChild(iframe);
+}
