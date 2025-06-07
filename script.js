@@ -17,4 +17,12 @@ window.addEventListener("scroll", () => {
   });
 });
 
-//
+// Optional: Add a smooth scroll effect (if internal links added)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
