@@ -1,57 +1,51 @@
+<!-- tokenomics.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V Network Services</title>
+  <title>Tokenomics - V Network Services</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <img src="images/logo.png" alt="VNS Logo" class="logo">
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-      <nav id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="vision.html">Vision</a>
-        <a href="why-join.html">Why Join Us</a>
-        <a href="roadmap.html">Roadmap</a>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="whyjoin.html">Why Join</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
   </header>
 
-  <main class="hero" style="background-image: url('images/hero-bg.png');">
-    <div class="hero-content">
-      <h1>Welcome to V Network Services</h1>
-      <p>Building Community Through Blockchain</p>
-      <button onclick="openSwap()">Buy VNST</button>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
-        <a href="https://x.com/vnservices07?t=nWJAfVspUfvYb6IKNkkOaw&s=09" target="_blank">Twitter</a>
-        <a href="https://www.instagram.com/vnetworkserviceofficial?igsh=MTl0MW9uZ2w0YmFtZQ==" target="_blank">Instagram</a>
-        <a href="https://youtube.com/@vnetworkservices?si=vowQkbD11Yb6zgdj" target="_blank">YouTube</a>
-        <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
-        <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
-      </div>
+  <section class="content-section">
+    <h2>Tokenomics</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Total Supply:</strong> 105,000,000 VNST</li>
+        <li><strong>Direct Reward Reserve:</strong> 5,000,000 VNST</li>
+        <li><strong>Private Sale:</strong> 1,000,000 VNST</li>
+        <li><strong>Public Sale:</strong> 99,000,000 VNST</li>
+      </ul>
     </div>
-  </main>
-
-  <iframe id="swapFrame" src="" style="display:none; width:100%; height:600px; border:none;"></iframe>
+  </section>
 
   <footer>
-    <p>&copy; 2025 V Network Services. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
+      <a href="https://x.com/vnservices07" target="_blank">Twitter</a>
+      <a href="https://instagram.com/vnetworkserviceofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@vnetworkservices" target="_blank">YouTube</a>
+      <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
+      <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
+    </div>
+    <p>© 2025 V Network Services</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-    function openSwap() {
-      document.getElementById('swapFrame').src = "https://vnservices26.github.io/vnst-SWAP/";
-      document.getElementById('swapFrame').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
