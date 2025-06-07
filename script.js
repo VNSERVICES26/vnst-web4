@@ -1,9 +1,9 @@
 function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('open');
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("show");
 }
 
 function openSwap() {
-  const section = document.getElementById('swap-section');
-  section.classList.toggle('hidden');
+  const swapSection = document.getElementById("swap-section");
+  swapSection.scrollIntoView({ behavior: "smooth" });
 }
