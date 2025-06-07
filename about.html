@@ -2,46 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - V Network Services</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <img src="images/logo.png" alt="VNS Logo" class="logo">
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-      <nav id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="vision.html">Vision</a>
-        <a href="why-join.html">Why Join Us</a>
-        <a href="roadmap.html">Roadmap</a>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="whyjoin.html">Why Join</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
   </header>
 
-  <main class="page-content" style="background-image: url('images/about-bg.png');">
-    <section class="section">
-      <h1>About Us</h1>
-      <p>
-        V Network Services is a single-owner crypto company founded with a mission to empower everyone through blockchain technology. We've launched a token that provides staking opportunities to all users with a guaranteed minimum profit of 52%, and potentially unlimited profit for long-term contributors. 
-      </p>
-      <p>
-        Our token supply is entirely public — 0% is reserved for the company or team. Our aim is to change how people view the online market, especially those who lack technical knowledge. Our slogan is "Brigade to Helping Poor Persons" because we believe technology should benefit everyone, not just the wealthy.
-      </p>
-    </section>
-  </main>
+  <section class="content-section">
+    <h2>About V Network Services</h2>
+    <p>
+      V Network Services is a blockchain-based community-driven company aiming to connect every individual with blockchain technology. 
+      It is a single-owner company committed to transparency, where 0% of token supply is held by the team.
+    </p>
+    <p>
+      The company was founded after years of experience in the networking space, recognizing the loss users faced in traditional companies.
+      V Network is built to ensure that every participant benefits—not just the leaders.
+    </p>
+    <p>
+      Our slogan is <strong>“Brigade to Helping Poor Persons”</strong>, and our mission is to deliver technological opportunities to every human being.
+    </p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 V Network Services. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
+      <a href="https://x.com/vnservices07" target="_blank">Twitter</a>
+      <a href="https://instagram.com/vnetworkserviceofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@vnetworkservices" target="_blank">YouTube</a>
+      <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
+      <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
+    </div>
+    <p>© 2025 V Network Services</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
 </body>
 </html>
