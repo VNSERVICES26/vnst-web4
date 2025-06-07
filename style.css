@@ -1,162 +1,144 @@
-/* Reset and base styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+/* ====== V Network Services Styles ====== */
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0a0a0a;
-  color: #fff;
-  line-height: 1.6;
-}
-img {
-  max-width: 100%;
-}
-a {
-  color: inherit;
-  text-decoration: none;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  overflow-x: hidden;
 }
 
-/* Header */
 header {
-  background: #111;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+  background: linear-gradient(90deg, #002244, #005577);
+  padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  border-bottom: 2px solid gold;
-}
-.logo {
+  z-index: 999;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
 }
-.logo img {
-  height: 40px;
+
+.logo {
+  height: 50px;
 }
-.logo h1 {
-  font-size: 1.3rem;
-  color: gold;
-}
-nav ul {
-  list-style: none;
+
+.navbar nav {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
-nav ul li a {
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-nav ul li a:hover,
-nav ul li a.active {
-  color: gold;
-}
-.menu-icon {
-  display: none;
-  font-size: 1.5rem;
+
+.navbar nav a {
   color: white;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
-.buy-btn {
-  background: gold;
+
+.navbar nav a:hover {
+  transform: scale(1.05);
+  color: #ffcc00;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  background: none;
   border: none;
-  color: black;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 20px;
-  transition: background 0.3s ease;
-}
-.buy-btn:hover {
-  background: orange;
+  color: white;
+  display: none;
 }
 
-/* Banner + Sections */
-.page-banner {
-  padding: 100px 20px;
-  text-align: center;
+.page-content {
+  padding: 40px 20px;
   background-size: cover;
   background-position: center;
+  min-height: 80vh;
 }
-.page-banner h2 {
-  font-size: 2rem;
-  color: gold;
-}
-.content {
-  padding: 60px 20px;
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: gold;
-}
-.content p,
-.content ul {
-  font-size: 1rem;
+
+.section {
   max-width: 900px;
-  margin: 10px auto;
-}
-.content ul li {
-  margin-bottom: 10px;
-}
-
-/* Swap section */
-.swap-frame {
-  padding: 60px 20px;
-  background: #1a1a1a;
-}
-.swap-frame iframe {
-  width: 100%;
-  height: 500px;
-  border-radius: 10px;
-  border: 2px solid gold;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
+.section h1 {
+  color: #004466;
+  font-size: 32px;
+  margin-bottom: 20px;
   text-align: center;
-  padding: 30px 20px;
-  background: #111;
-  color: #aaa;
+  animation: fadeDown 1s ease;
 }
-.social-icons {
-  margin-bottom: 10px;
+
+.section ul {
+  list-style: none;
+  padding: 0;
 }
-.social-icons a {
-  margin: 0 10px;
-  color: white;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
+
+.section li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+  animation: fadeLeft 1s ease;
 }
-.social-icons a:hover {
-  color: gold;
+
+.section li::before {
+  content: "\2713";
+  color: #ff8800;
+  position: absolute;
+  left: 0;
+}
+
+footer {
+  background-color: #002244;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.whyjoin-image {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  display: block;
+  animation: bounceIn 1.2s ease;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav ul {
+  .navbar nav {
     display: none;
     flex-direction: column;
-    gap: 15px;
-    background: #222;
-    padding: 20px;
+    background-color: #003366;
     position: absolute;
-    top: 65px;
+    top: 60px;
     right: 20px;
-    border: 1px solid gold;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 8px;
   }
-  nav ul.show {
+  .navbar nav.active {
     display: flex;
   }
-  .menu-icon {
+  .menu-toggle {
     display: block;
   }
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
 }
