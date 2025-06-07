@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vision - VNS</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision - V Network Services</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>...</header>
-  <main>
-    <section class="page-banner"><h2>Our Vision</h2></section>
-    <section class="content">Vision content here.</section>
+  <header>
+    <div class="navbar">
+      <img src="images/logo.png" alt="VNS Logo" class="logo">
+      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="vision.html">Vision</a>
+        <a href="why-join.html">Why Join Us</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" style="background-image: url('images/vision-bg.png');">
+    <section class="section">
+      <h1>Our Vision</h1>
+      <ul>
+        <li>To connect every individual with technology</li>
+        <li>Build trust in the online market</li>
+        <li>Deliver real-life utility products</li>
+        <li>Help the poor</li>
+        <li>Bring a new trend in the crypto world</li>
+        <li>Ensure every user books profit</li>
+        <li>Never abandon anyone who joins us in this journey</li>
+      </ul>
+    </section>
   </main>
-  <footer>...</footer>
+
+  <footer>
+    <p>&copy; 2025 V Network Services. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
