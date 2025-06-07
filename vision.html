@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vision - V Network Services</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Vision - V Network Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <img src="images/logo.png" alt="VNS Logo" class="logo">
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-      <nav id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="vision.html">Vision</a>
-        <a href="why-join.html">Why Join Us</a>
-        <a href="roadmap.html">Roadmap</a>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="whyjoin.html">Why Join</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
   </header>
 
-  <main class="page-content" style="background-image: url('images/vision-bg.png');">
-    <section class="section">
-      <h1>Our Vision</h1>
+  <section class="content-section">
+    <h2>Our Vision</h2>
+    <div class="card">
       <ul>
-        <li>To connect every individual with technology</li>
+        <li>Connect every human with technology</li>
         <li>Build trust in the online market</li>
         <li>Deliver real-life utility products</li>
-        <li>Help the poor</li>
-        <li>Bring a new trend in the crypto world</li>
-        <li>Ensure every user books profit</li>
-        <li>Never abandon anyone who joins us in this journey</li>
+        <li>Support the poor through technology</li>
+        <li>Introduce new trends in crypto</li>
+        <li>Ensure profit to every user</li>
+        <li>Stand by every supporter</li>
       </ul>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 V Network Services. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
+      <a href="https://x.com/vnservices07" target="_blank">Twitter</a>
+      <a href="https://instagram.com/vnetworkserviceofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@vnetworkservices" target="_blank">YouTube</a>
+      <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
+      <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
+    </div>
+    <p>© 2025 V Network Services</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
 </body>
 </html>
