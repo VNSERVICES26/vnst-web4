@@ -2,41 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roadmap | V Network Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roadmap - V Network Services</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="V Network Logo" class="logo" />
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="navbar">
-      <nav id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="vision.html">Vision</a>
-        <a href="why-join.html">Why Join Us</a>
-        <a href="roadmap.html">Roadmap</a>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="whyjoin.html">Why Join</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
   </header>
 
-  <div class="page-content" style="background-image: url('images/hero-bg.png');">
-    <div class="section">
-      <h1>Our Roadmap</h1>
+  <section class="content-section">
+    <h2>Our Roadmap</h2>
+    <div class="card">
       <ul>
-        <li><strong>Q1:</strong> Token creation, Initial launch</li>
-        <li><strong>Q2:</strong> Public sale, Staking plan launch, DEX listing</li>
-        <li><strong>Q3:</strong> Real life utility product launch - DigiGold App, Education App</li>
+        <li><strong>Q1:</strong> Token Creation, Initial Launch</li>
+        <li><strong>Q2:</strong> Public Sale, Staking Plan Launch, DEX Listing</li>
+        <li><strong>Q3:</strong> Real Life Utility Launch: Digi Gold App, Education App</li>
         <li><strong>Q4:</strong> Blockchain Development</li>
       </ul>
     </div>
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 V Network Services | All rights reserved</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
+      <a href="https://x.com/vnservices07" target="_blank">Twitter</a>
+      <a href="https://instagram.com/vnetworkserviceofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@vnetworkservices" target="_blank">YouTube</a>
+      <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
+      <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
+    </div>
+    <p>© 2025 V Network Services</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
