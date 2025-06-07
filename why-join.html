@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Why Join Us - V Network Services</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <img src="images/logo.png" alt="VNS Logo" class="logo">
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-      <nav id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="vision.html">Vision</a>
-        <a href="why-join.html">Why Join Us</a>
-        <a href="roadmap.html">Roadmap</a>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="whyjoin.html">Why Join</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
   </header>
 
-  <main class="page-content" style="background-image: url('images/whyjoin-bg.png');">
-    <section class="section">
-      <h1>Why Join Us?</h1>
-      <ul>
-        <li>✅ First company that does not keep tokens with itself</li>
-        <li>✅ 100% tokens distributed to public</li>
-        <li>✅ Price never drops</li>
-        <li>✅ 52% minimum guaranteed reward on staking</li>
-        <li>✅ Referral income up to 5 levels</li>
-        <li>✅ Buy & sell at fixed price</li>
-        <li>✅ Transparent system</li>
-        <li>✅ Instant withdrawals</li>
-        <li>✅ Decentralized rewards</li>
-        <li>✅ Weekly offers</li>
-        <li>✅ 17% monthly ROI for 11 months</li>
-        <li>✅ 2X reward in staking</li>
-      </ul>
-      <img src="images/whyjoin.jpg" alt="Why Join Image" class="whyjoin-image">
-    </section>
-  </main>
+  <section class="content-section">
+    <h2>Why Join Us</h2>
+    <div class="card">
+      <p>Other companies focus profit for a few; we ensure it for all.</p>
+      <p>We offer 100% guaranteed 52% minimum return with long-term potential for unlimited profits.</p>
+      <p>We provide community-driven, transparent blockchain services with zero team holdings.</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 V Network Services. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/share/1C7Ciu39DY/" target="_blank">Facebook</a>
+      <a href="https://x.com/vnservices07" target="_blank">Twitter</a>
+      <a href="https://instagram.com/vnetworkserviceofficial" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@vnetworkservices" target="_blank">YouTube</a>
+      <a href="https://whatsapp.com/channel/0029Vb2UHbIGk1G1PYwrI81V" target="_blank">WhatsApp</a>
+      <a href="https://t.me/vnstoken" target="_blank">Telegram</a>
+    </div>
+    <p>© 2025 V Network Services</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
 </body>
 </html>
