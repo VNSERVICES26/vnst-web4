@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tokonomix - VNS</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokenomics - V Network Services</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>...</header>
-  <main>
-    <section class="page-banner"><h2>Tokonomix</h2></section>
-    <section class="content">Tokenomics content here.</section>
+  <header>
+    <div class="navbar">
+      <img src="images/logo.png" alt="VNS Logo" class="logo">
+      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="vision.html">Vision</a>
+        <a href="why-join.html">Why Join Us</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" style="background-image: url('images/token-bg.png');">
+    <section class="section">
+      <h1>Tokenomics</h1>
+      <ul>
+        <li><strong>Total Supply:</strong> 105,000,000 VNST</li>
+        <li><strong>Direct Reward Reserve:</strong> 5,000,000 VNST</li>
+        <li><strong>Private Sale:</strong> 1,000,000 VNST</li>
+        <li><strong>Public Sale:</strong> 99,000,000 VNST (to be released over 11 months)</li>
+      </ul>
+    </section>
   </main>
-  <footer>...</footer>
+
+  <footer>
+    <p>&copy; 2025 V Network Services. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
