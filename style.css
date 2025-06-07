@@ -1,144 +1,165 @@
-/* ====== V Network Services Styles ====== */
-
+/* style.css */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
-  overflow-x: hidden;
+  background: #0a0a0a;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
-header {
-  background: linear-gradient(90deg, #002244, #005577);
-  padding: 10px 20px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 0.7rem 1.5rem;
   position: sticky;
   top: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.1);
 }
 
 .logo {
   height: 50px;
+  animation: slideInLeft 1s ease forwards;
 }
 
-.navbar nav {
+nav ul {
   display: flex;
-  gap: 15px;
-}
-
-.navbar nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.navbar nav a:hover {
-  transform: scale(1.05);
-  color: #ffcc00;
-}
-
-.menu-toggle {
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: white;
-  display: none;
-}
-
-.page-content {
-  padding: 40px 20px;
-  background-size: cover;
-  background-position: center;
-  min-height: 80vh;
-}
-
-.section {
-  max-width: 900px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.section h1 {
-  color: #004466;
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-align: center;
-  animation: fadeDown 1s ease;
-}
-
-.section ul {
   list-style: none;
+  gap: 1.2rem;
+  margin: 0;
   padding: 0;
 }
 
-.section li {
-  margin: 10px 0;
-  padding-left: 20px;
-  position: relative;
-  animation: fadeLeft 1s ease;
+nav ul li a {
+  color: gold;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.section li::before {
-  content: "\2713";
-  color: #ff8800;
-  position: absolute;
-  left: 0;
+nav ul li a:hover {
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.content-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  max-width: 600px;
+  margin: auto;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+  animation: bounceIn 1s ease;
+}
+
+.card ul {
+  text-align: left;
+  list-style: square;
+  padding-left: 1.2rem;
+}
+
+.card ul li {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
 }
 
 footer {
-  background-color: #002244;
-  color: #fff;
+  background: #111;
   text-align: center;
-  padding: 15px 0;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
 }
 
-.whyjoin-image {
-  width: 100%;
-  max-width: 700px;
-  margin: 20px auto;
-  display: block;
-  animation: bounceIn 1.2s ease;
+footer .social-icons a {
+  margin: 0 0.7rem;
+  color: gold;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar nav {
-    display: none;
-    flex-direction: column;
-    background-color: #003366;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 8px;
+footer .social-icons a:hover {
+  color: white;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
   }
-  .navbar nav.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-/* Animations */
-@keyframes fadeDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeLeft {
-  from { transform: translateX(-30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes bounceIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  60% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .content-section {
+    padding: 2rem 1rem;
+  }
 }
